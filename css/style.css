@@ -29,19 +29,17 @@ h1 {
 }
 
 .top-div {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   background: #f4f9fd;
-  padding: 12px 254px 12px;
-  width: 1440px;
   height: 92px;
   gap: 100px;
 }
+
 .logo img {
   width: 74px;
   height: 68px;
-  background: url(), lightgray 50% / cover no-repeat;
 }
 
 .navbar ul {
@@ -60,9 +58,9 @@ h1 {
 }
 
 .top-middle {
-  position: relative;
-  width: 1440px;
+  flex-direction: column;
   height: 217px;
+  gap: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,22 +80,30 @@ h1 {
   font-weight: 600;
   line-height: 20px;
   text-align: center;
-  margin-bottom: 60px;
 }
 
 .box {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 13px 0 30px;
   align-items: center;
   width: 940px;
   height: 78.083px;
   background-color: #f4f9fd;
-  margin-top: 80px;
 }
 
 .image {
   display: flex;
-  padding: 30px 250px 30px 250px;
+}
+
+.image svg {
+  margin-right: 5px;
+}
+
+.header-btns {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .button {
@@ -119,7 +125,6 @@ h1 {
   align-items: center;
   width: 140px;
   height: 48.618px;
-  padding: 23px 64px 24px 64px;
   gap: 5px;
   border-radius: 5px;
   border: 1px solid #8843e1;
@@ -127,30 +132,57 @@ h1 {
   cursor: pointer;
 }
 
-.marquee {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-  width: 314px;
-  height: 75px;
-  border-radius: 60.75px;
-  background: #fff;
-  margin-top: 20px;
+/*section first start*/
+
+.first {
+  padding-top: 20px;
 }
 
-.marquee img {
+/* slaydlara marquee (reklam xarakterli) tetbiq eilir*/
+
+.marquee {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 60.75px;
+  background: #fff;
+  padding: 7px;
+  max-width: 380px;
+  width: 100%;
+}
+
+.slide-price {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.slide img {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
   border-radius: 30px;
-  background: url(), lightgray 50% / cover no-repeat;
 }
 
-.marquee p {
+.slide h3 {
+  color: #040f0f;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.slide p {
   color: #040f0f;
   font-family: Montserrat;
   font-size: 12px;
@@ -159,6 +191,22 @@ h1 {
   line-height: normal;
   text-transform: capitalize;
 }
+.slide-price p {
+  color: #040f0f;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+/*section second start*/
+
+.second {
+  padding-top: 60px;
+}
 
 .qutu {
   display: flex;
@@ -166,16 +214,39 @@ h1 {
   align-items: center;
   margin-top: 20px;
   gap: 40px;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.qutu p {
-  color:  #040f0f;;
+.ish p {
+  color: #2e2c2c;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: lowercase;
 }
-/*.qutu p:nth-child(2) {
+.text {
   display: flex;
-  flex-direction: row;
-  align-items: end;
-}*/
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  gap: 5px;
+}
+.text p {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.2px;
+  width: 50.326px;
+  height: 24.515px;
+}
 
 #new {
   display: flex;
@@ -188,34 +259,61 @@ h1 {
   gap: 10px;
   margin-left: auto;
 }
+
 .cards {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 60px;
+  row-gap: 80px;
   background-color: #f4f9fd;
-  margin-top: 80px;
-  margin-left: 100px;
+  margin: 80px auto;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.active {
+  border-radius: 3px;
+  background: #8843e1 !important;
+  color: #fff;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   align-items: center;
   gap: 10px;
   width: 368px;
   height: 169px;
   border-radius: 20px;
   background: #fff;
+  position: relative;
+}
+
+.card-info {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
 }
 
 .card img {
   width: 125px;
   height: 125px;
   border-radius: 63.5px;
-  background: url(), lightgray 50% / cover no-repeat;
+  position: absolute;
+  top: -60px;
 }
+
+.card svg {
+  position: absolute;
+  right: 17px;
+  top: 14px;
+}
+
 .card p {
   color: #040f0f;
   font-family: Montserrat;
@@ -225,16 +323,17 @@ h1 {
   line-height: normal;
   text-transform: capitalize;
 }
+/* sehifeleshdirme yaradilir*/
 
 .pages {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 200px;
   padding: 10px;
   gap: 15px;
 }
+
 .page {
   display: flex;
   flex-direction: column;
@@ -247,29 +346,35 @@ h1 {
   border-radius: 3px;
   background: #fff;
 }
+.pagination p {
+  text-align: center;
+}
+/* footer start*/
 
 .footer-top {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
-  height: 370px;
-  width: 1440px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  height: 404px;
   background-color: #221238;
+  width: 100%;
 }
-.footer-sosial {
+
+.footer-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.footer-sosial img {
+.loginbig img {
   width: 139.097px;
   height: 128px;
-  background: url(), cover no-repeat;
 }
-.footer-middle {
+
+.footer-sosial {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -277,10 +382,12 @@ h1 {
   gap: 10px;
 }
 
-.footer-middle img {
+.footer-sosial img {
   width: 40.028px;
   height: 40px;
 }
+
+/*footer daxilinde informasiya*/
 
 .footer-info {
   display: flex;
@@ -291,7 +398,7 @@ h1 {
 }
 
 .footer-info a,
-p {
+.footer-info p {
   color: #e5f6ff;
   font-family: Montserrat;
   font-size: 14px;
@@ -300,17 +407,26 @@ p {
   line-height: normal;
 }
 
-.right {
+.footer-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.right button {
+.bildirish p {
+  color: #e5f6ff;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.kvadrat {
+  position: absolute;
   width: 460.32px;
   height: 49px;
-  flex-shrink: 0;
   border: 5px solid #e5f6ff;
   background: #3b3c3b;
   color: #e5f6ff;
@@ -322,15 +438,31 @@ p {
   text-transform: lowercase;
 }
 
+.small svg {
+  width: 14.977px;
+  height: 22.816px;
+}
+
+/* footerin asagi hissesi footer-bottom*/
+
 .footer-bottom {
-  height: 30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #221238;
+  margin-bottom: 60px;
 }
-
+.footer-bottom p,
+.footer-bottom a {
+  color: #e5f6ff;
+  font-family: "Open Sans";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
 span {
   color: #e5f6ff;
 }
